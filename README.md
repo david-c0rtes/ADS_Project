@@ -80,17 +80,19 @@ Saves data and exits the application.
 
 File Name: user_data
 
-Each user's data includes:
-
 XP: Total XP accumulated based on habit streaks.
 
 Level: Calculated from the XP.
 
-**Habits:** 
+Habit Name
 
-**Each habit includes:**
+Frequency
 
-Name, Frequency, Preferred Time, Notification Preference, History: A 7-day record of whether the habit was completed (yes or no).
+Preferred Time
+
+Notification Preference: yes or no
+
+History: A 7-day record of whether the habit was completed (yes or no).
 
 ### Example Data Format in user_data:
 
