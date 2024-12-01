@@ -1,14 +1,13 @@
 # PlanEase
-PlanEase is a platform designed to help users build consistent habits, track their progress, and level up their achievements.
 
-Our platform has three main functions:
+<div align="center">PlanEase is an app designed to turn the hassle of planning and the boredom of calendars
 
-It allows users to track their daily habits and monitor progress over time through streaks.
+<div align="center">Into an intuitive and interactive experience, helping people across generations
 
-It displays a leaderboard to compare achievements among users.
+<div align="center">To make habit tracking fun and easy 
 
-It enables users to update existing habits or add new ones seamlessly.
-
+<div align="left">- The PlanEase Team
+  
 ## Features
 
 ### 1. Tracking Progress
