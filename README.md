@@ -25,25 +25,25 @@ Notification preferences
 To run this program, ensure you have the following installed on your system:
 
 **Python**: Version 3.6 or higher.
+
 Libraries:
 **matplotlib** for data visualization
-**tkinter** for the GUI
-To install the required libraries, use the following command:
 
-_bash
-Copy code
-pip install matplotlib_
+**tkinter** for the GUI
+
+To install the required libraries, use the following command:
+_pip install matplotlib__
 
 ## Usage
 Launch the Program:
 
-Run the file habit_tracker.py to start the GUI.
-Login:
+Run the file GUIcode.py to start the GUI.
 
+**Login:**
 Enter your User ID to log in or create a new account.
 If the User ID does not exist, a new account will be created automatically.
-Main Menu:
 
+**Main Menu:**
 The main menu provides the following options:
 **View Progress:**
 Displays a visual streak progress graph for your habits.
