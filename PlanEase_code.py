@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 users = {}
 
 def load_users_from_file(filepath):
-    """Load user data from a file."""
     with open(filepath, 'r') as file:
         lines = file.readlines()
 
@@ -11,39 +10,38 @@ def load_users_from_file(filepath):
 
     for line in lines:
         line = line.strip()
-        if not line:  # Skip empty lines
+        if not line:  
             continue
-        if line.startswith("[") and line.endswith("]"):  # Identify user header
+        if line.startswith("[") and line.endswith("]"):  
             current_user = line[1:-1]
             users[current_user] = {'habits': [], 'curr_XP': 0, 'curr_lvl': 1}
-        elif line.startswith("XP:"):  # Parse XP data
+        elif line.startswith("XP:"): 
             xp = int(line.split(": ")[1])
             if current_user:
                 users[current_user]['curr_XP'] = xp
-        elif line.startswith("Level:"):  # Parse Level data
+        elif line.startswith("Level:"):  
             level = int(line.split(": ")[1])
             if current_user:
                 users[current_user]['curr_lvl'] = level
-        elif line.startswith("History:"):  # Parse habit history
+        elif line.startswith("History:"):  
             history = line.split(": ")[1].split(", ")
             if current_user and users[current_user]['habits']:
                 users[current_user]['habits'][-1]['history'] = history
-        else:  # Parse habit details
+        else: 
             habit_data = line.split(", ")
-            if len(habit_data) < 4:  # Validate habit structure
+            if len(habit_data) < 4: 
                 continue
             habit = {
                 'name': habit_data[0],
                 'frequency': habit_data[1],
                 'pref_time': habit_data[2],
                 'notifications': habit_data[3].lower() == "yes",
-                'history': []  # Placeholder until history is added
+                'history': [] 
             }
             if current_user:
                 users[current_user]['habits'].append(habit)
 
 def save_users_to_file(filepath):
-    """Save updated user data back to the file."""
     with open(filepath, 'w') as file:
         for user_id, data in users.items():
             file.write(f"[{user_id}]\n")
@@ -54,32 +52,30 @@ def save_users_to_file(filepath):
                 file.write(f"History: {', '.join(habit['history'])}\n")
 
 def calculate_streaks_and_levels(user_id, update_only=False):
-    """Calculate streaks and levels for a specific user."""
     user = users[user_id]
     total_xp_to_add = 0
 
     for habit in user['habits']:
         streak = 0
-        streak_xp = 0  # Track XP for this habit
+        streak_xp = 0 
 
-        if update_only:  # Only recalculate if updates have been made
+        if update_only: 
             for day in habit['history']:
                 if day == "yes":
                     streak += 1
-                    multiplier = 1 + (streak - 1) * 0.5  # XP multiplier increases with streak
-                    streak_xp += int(10 * multiplier)  # Add XP with multiplier
+                    multiplier = 1 + (streak - 1) * 0.5  
+                    streak_xp += int(10 * multiplier)  
                 else:
                     streak = 0
 
-        total_xp_to_add += streak_xp  # Accumulate XP for the user
+        total_xp_to_add += streak_xp 
 
-    if update_only:  # Update XP and level only if changes are made
+    if update_only: 
         user['curr_XP'] += total_xp_to_add
         user['curr_lvl'] = user['curr_XP'] // 100 + 1
 
-# Quick Sort Implementation for the Leaderboard
+
 def quick_sort_leaderboard(leaderboard):
-    """Quick sort implementation for leaderboard."""
     if len(leaderboard) <= 1:
         return leaderboard
     pivot = leaderboard[0]
@@ -90,14 +86,8 @@ def quick_sort_leaderboard(leaderboard):
     return quick_sort_leaderboard(less) + [pivot] + quick_sort_leaderboard(greater)
 
 def generate_leaderboard():
-    """Generate and display the leaderboard."""
-    # Convert users dictionary to a list of tuples for sorting
     leaderboard = list(users.items())
-
-    # Sort using Quick Sort
     sorted_leaderboard = quick_sort_leaderboard(leaderboard)
-
-    # Display the leaderboard
     print("\nLeaderboard:")
     print(f"{'Rank':<5} {'User':<15} {'Level':<10} {'XP':<10}")
     print("-" * 40)
@@ -105,7 +95,6 @@ def generate_leaderboard():
         print(f"{rank:<5} {user_id:<15} {user_data['curr_lvl']:<10} {user_data['curr_XP']:<10}")
 
 def plot_progress(user_id):
-    """Plot streak progress for each habit."""
     user = users[user_id]
     habits = user['habits']
 
@@ -132,7 +121,6 @@ def plot_progress(user_id):
     plt.show()
 
 def add_new_participant():
-    """Add a new participant."""
     user_id = input("Enter your name or ID: ").strip()
     if user_id in users:
         print("User already exists!")
@@ -150,7 +138,7 @@ def add_new_participant():
             'frequency': frequency,
             'pref_time': pref_time,
             'notifications': notifications,
-            'history': ["no"] * 7  # Initialize a 7-day history
+            'history': ["no"] * 7 
         })
 
         add_more = input("Do you want to add another habit? (yes/no): ").strip().lower()
@@ -158,7 +146,6 @@ def add_new_participant():
             break
 
 def update_data(user_id):
-    """Update data for a specific user."""
     if user_id not in users:
         print("User ID not found.")
         return
@@ -178,8 +165,8 @@ def update_data(user_id):
                 habit = user['habits'][habit_index]
                 print(f"Updating habit: {habit['name']}")
                 status = input(f"Enter today's completion status for '{habit['name']}' (yes/no): ").strip().lower()
-                habit['history'].pop(0)  # Remove the oldest day
-                habit['history'].append(status)  # Add today's result
+                habit['history'].pop(0) 
+                habit['history'].append(status) 
             else:
                 print("Invalid habit selection.")
         elif choice == "new":
@@ -193,7 +180,7 @@ def update_data(user_id):
                 'frequency': frequency,
                 'pref_time': pref_time,
                 'notifications': notifications,
-                'history': ["no"] * 7  # Initialize a 7-day history
+                'history': ["no"] * 7  
             })
         else:
             print("Invalid choice.")
@@ -205,7 +192,6 @@ def update_data(user_id):
     calculate_streaks_and_levels(user_id, update_only=True)
 
 def view_user_data(user_id):
-    """View data for a specific user."""
     if user_id not in users:
         print("No data found for this user.")
         return
@@ -223,7 +209,6 @@ def view_user_data(user_id):
     plot_progress(user_id)
 
 def main():
-    """Main function for user interaction."""
     file_path = "user_data"
     load_users_from_file(file_path)
 
