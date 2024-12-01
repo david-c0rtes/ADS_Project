@@ -45,16 +45,20 @@ If the User ID does not exist, a new account will be created automatically.
 Main Menu:
 
 The main menu provides the following options:
-View Progress:
+**View Progress:**
 Displays a visual streak progress graph for your habits.
-View Leaderboard:
+
+**View Leaderboard:**
 Shows the leaderboard, ranking users based on levels and XP.
-Update/Add Habit:
+
+**Update/Add Habit:**
 Update progress for an existing habit or add a new habit.
-Exit:
+
+**Exit:**
 Saves data and exits the application.
+
 ## Data Management
-How the Data is Stored:
+### How the Data is Stored:
 
 File Name: user_data
 
@@ -64,11 +68,11 @@ XP: Total XP accumulated based on habit streaks.
 
 Level: Calculated from the XP.
 
-Habits: 
-Each habit includes:
+**Habits:** 
+**Each habit includes:**
 Name, Frequency, Preferred Time, Notification Preference, History: A 7-day record of whether the habit was completed (yes or no).
-Example Data Format in user_data:
 
+### Example Data Format in user_data:
 [JohnDoe]
 XP: 150
 Level: 2
@@ -82,23 +86,27 @@ History: yes, no, yes, no, yes, yes, no
 
 Visualize streaks for each habit in a line chart.
 Track your consistency over time.
-Leaderboard:
+**Leaderboard:**
 
 Ranks users by levels and XP using a quicksort algorithm.
 Displays the top performers in a separate window.
-Habit Updates:
+**Habit Updates:**
 
 Modify existing habits or add new ones directly through the GUI.
 Save changes to the user_data file for future sessions.
 ## Technical Details
-Data Structures:
-Dictionaries:
+
+### Data Structures:
+
+**Dictionaries:**
 Used to store user data, including habits, XP, and levels.
-Lists:
+
+**Lists:**
 Maintains habit histories and temporary data for leaderboard sorting.
 ### Algorithms:
 **Quick Sort:**
 Efficiently sorts users for the leaderboard based on XP and levels.
+
 **XP and Level Calculation:**
 XP is calculated from streaks and habit completion using multipliers.
 Levels are determined by cumulative XP (100 XP per level).
