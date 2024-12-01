@@ -6,35 +6,35 @@ Our platform has three main functions:
 It allows users to track their daily habits and monitor progress over time through streaks.
 It displays a leaderboard to compare achievements among users.
 It enables users to update existing habits or add new ones seamlessly.
-# Features
-1. Tracking Progress
+## Features
+### 1. Tracking Progress
 Users can log their daily habit progress (e.g., whether a task was completed).
 A visual streak progress graph is displayed to help users monitor their consistency.
-2. Leaderboard
+### 2. Leaderboard
 The leaderboard ranks users based on their levels and XP.
 XP and levels are determined by the user's habit streaks and consistent progress.
 The leaderboard updates dynamically as users log their progress or add new habits.
-3. Updating or Adding Habits
+### 3. Updating or Adding Habits
 Users can update the progress of an existing habit or add new habits with details such as:
 Habit name
 Frequency (e.g., daily, weekly)
 Preferred time
 Notification preferences
 
-# Installation
+## Installation
 To run this program, ensure you have the following installed on your system:
 
-Python: Version 3.6 or higher.
+**Python**: Version 3.6 or higher.
 Libraries:
-matplotlib for data visualization
-tkinter for the GUI
+**matplotlib** for data visualization
+**tkinter** for the GUI
 To install the required libraries, use the following command:
 
-bash
+_bash
 Copy code
-pip install matplotlib
+pip install matplotlib_
 
-# Usage
+## Usage
 Launch the Program:
 
 Run the file habit_tracker.py to start the GUI.
@@ -53,7 +53,7 @@ Update/Add Habit:
 Update progress for an existing habit or add a new habit.
 Exit:
 Saves data and exits the application.
-# Data Management
+## Data Management
 How the Data is Stored:
 File Name: user_data
 Each user's data includes:
@@ -76,7 +76,7 @@ History: yes, yes, no, yes, yes, yes, yes
 Habit2, weekly, 6:00 PM, no
 History: yes, no, yes, no, yes, yes, no
 
-# Key Functionalities
+## Key Functionalities
 Streak Progress:
 
 Visualize streaks for each habit in a line chart.
@@ -89,7 +89,7 @@ Habit Updates:
 
 Modify existing habits or add new ones directly through the GUI.
 Save changes to the user_data file for future sessions.
-# Technical Details
+## Technical Details
 Data Structures:
 Dictionaries:
 Used to store user data, including habits, XP, and levels.
@@ -101,11 +101,7 @@ Efficiently sorts users for the leaderboard based on XP and levels.
 XP and Level Calculation:
 XP is calculated from streaks and habit completion using multipliers.
 Levels are determined by cumulative XP (100 XP per level).
-# Authors
+## Authors
 This project was developed by:
 
-David Cortes
-Kristian Giuffre
-Marcos Ruano
-Mariana Serrano
-Andrea Salamini
+David Cortes, Kristian Giuffre, Marcos Ruano, Mariana Serrano, Andrea Salamini
