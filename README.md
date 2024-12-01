@@ -92,7 +92,7 @@ Preferred Time
 
 Notification Preference: yes or no
 
-History: A 7-day record of whether the habit was completed (yes or no).
+History: record of whether the habit was completed (yes or no).
 
 ### Example Data Format in user_data:
 
