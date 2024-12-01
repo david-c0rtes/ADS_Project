@@ -6,7 +6,7 @@
 
 <div align="center">To make habit tracking fun and easy 
 
-<div align="left">- The PlanEase Team
+<div align="left">- The PlanEase Team: David Cortes, Mariana Serrano, Kristian Giuffré, Andrea Salamini, Marcos Ruano
   
 ## Features
 
