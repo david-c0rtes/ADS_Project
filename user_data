@@ -1,0 +1,80 @@
+[Marcos]
+XP: 260
+Level: 3
+reading_a_book, daily, 8:30 pm, yes
+History: yes, yes, yes, no, yes, no, yes
+studying, daily, 4:00 pm, yes
+History: yes, yes, yes, no, yes, no, yes
+[Alice]
+XP: 230
+Level: 3
+morning_run, daily, 6:00 am, yes
+History: yes, yes, no, yes, no, yes, yes
+meditation, daily, 7:00 am, yes
+History: no, yes, yes, yes, no, yes, no
+[Bob]
+XP: 230
+Level: 3
+coding_practice, daily, 8:00 pm, yes
+History: no, yes, yes, yes, no, yes, yes
+exercise, daily, 6:00 am, no
+History: yes, yes, no, yes, no, yes, no
+[Charlie]
+XP: 220
+Level: 3
+reading, daily, 9:00 pm, yes
+History: yes, yes, yes, no, yes, yes, yes
+cycling, weekly, 5:00 pm, yes
+History: yes, no, no, no, yes, no, no
+[Diana]
+XP: 320
+Level: 4
+workout, daily, 6:30 am, yes
+History: yes, yes, no, yes, yes, yes, yes
+journaling, daily, 10:00 pm, yes
+History: yes, no, yes, yes, yes, no, yes
+[Eve]
+XP: 150
+Level: 2
+painting, weekly, 4:00 pm, no
+History: yes, no, no, no, yes, no, yes
+gardening, weekly, 7:00 am, yes
+History: yes, yes, no, yes, no, no, yes
+[Andrea]
+XP: 100
+Level: 2
+Gym, daily, 5:30 pm, yes
+History: no, yes, yes, no, no, yes, yes
+[Mariana]
+XP: 420
+Level: 5
+study, weekly, 5:00 am, yes
+History: yes, yes, no, no, no, no, yes
+eating vegetables, daily, 12:00 am, yes
+History: yes, yes, yes, yes, yes, yes, yes
+[Kristian]
+XP: 140
+Level: 2
+no nicotine, daily, 9:00 am, yes
+History: no
+gym, daily, 3pm, yes
+History: no, no, no, yes, yes, yes, yes
+[David]
+XP: 345
+Level: 4
+nap time, daily, 4pm, yes
+History: no, no, no, yes, yes, yes, yes
+cycling, weekly, 6:30pm, yes
+History: no, no, no, no, no, yes, yes
+[Tom]
+XP: 20
+Level: 1
+gym, daily, 5pm, yes
+History: no, no, no, no, no, no, yes
+study, daily, 3pm, yes
+History: no, no, no, no, no, no, yes
+[Jerry]
+XP: 30
+Level: 1
+dancing, daily, 9pm, yes
+History: no, no, no, no, no, yes, yes
