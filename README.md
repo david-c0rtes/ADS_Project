@@ -55,19 +55,20 @@ Exit:
 Saves data and exits the application.
 ## Data Management
 How the Data is Stored:
+
 File Name: user_data
+
 Each user's data includes:
+
 XP: Total XP accumulated based on habit streaks.
+
 Level: Calculated from the XP.
-Habits: Each habit includes:
-Name
-Frequency
-Preferred Time
-Notification Preference
-History: A 7-day record of whether the habit was completed (yes or no).
+
+Habits: 
+Each habit includes:
+Name, Frequency, Preferred Time, Notification Preference, History: A 7-day record of whether the habit was completed (yes or no).
 Example Data Format in user_data:
-yaml
-Copy code
+
 [JohnDoe]
 XP: 150
 Level: 2
@@ -77,7 +78,7 @@ Habit2, weekly, 6:00 PM, no
 History: yes, no, yes, no, yes, yes, no
 
 ## Key Functionalities
-Streak Progress:
+**Streak Progress:**
 
 Visualize streaks for each habit in a line chart.
 Track your consistency over time.
@@ -95,10 +96,10 @@ Dictionaries:
 Used to store user data, including habits, XP, and levels.
 Lists:
 Maintains habit histories and temporary data for leaderboard sorting.
-Algorithms:
-Quick Sort:
+### Algorithms:
+**Quick Sort:**
 Efficiently sorts users for the leaderboard based on XP and levels.
-XP and Level Calculation:
+**XP and Level Calculation:**
 XP is calculated from streaks and habit completion using multipliers.
 Levels are determined by cumulative XP (100 XP per level).
 ## Authors
