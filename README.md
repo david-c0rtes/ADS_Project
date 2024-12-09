@@ -122,6 +122,8 @@ Track your consistency over time.
 
 Ranks users by levels and XP using a quicksort algorithm.
 
+Hash tables are transformed to a list for quicksort.
+
 Displays the top performers in a separate window.
 
 **Habit Updates:**
