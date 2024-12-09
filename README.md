@@ -12,9 +12,9 @@
 
 ### 1. Tracking Progress
 
-Users can log their daily habit progress (e.g., whether a task was completed).
+Users can log their daily habit progress (e.g. whether a task was completed).
 
-A visual streak progress graph is displayed to help users monitor their consistency.
+A visual streak progress graph of the last week is displayed to help users monitor their consistency.
 
 ### 2. Leaderboard
 
@@ -48,13 +48,10 @@ Libraries:
 
 **tkinter** for the GUI
 
-To install the required libraries, use the following command:
-_pip install matplotlib__
-
 ## Usage
 Launch the Program:
 
-Run the file GUIcode.py to start the GUI.
+Run the file to start the GUI.
 
 **Login:**
 Enter your User ID to log in or create a new account.
@@ -76,7 +73,7 @@ Update progress for an existing habit or add a new habit.
 Saves data and exits the application.
 
 ## Data Management
-### How the Data is Stored:
+### How the test Data was Stored:
 
 File Name: user_data
 
@@ -130,7 +127,6 @@ Displays the top performers in a separate window.
 
 Modify existing habits or add new ones directly through the GUI.
 
-Save changes to the user_data file for future sessions.
 
 ## Technical Details
 
@@ -142,7 +138,7 @@ Used to store user data, including habits, XP, and levels.
 
 **Lists:**
 
-Maintains habit histories and temporary data for leaderboard sorting.
+Used to create test data to simulate the GUI and temporary data for leaderboard sorting.
 
 ### Algorithms:
 
