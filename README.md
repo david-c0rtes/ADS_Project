@@ -73,7 +73,7 @@ Update progress for an existing habit or add a new habit.
 Saves data and exits the application.
 
 ## Data Management
-### How the test Data was Stored:
+### How the Test Data was Stored:
 
 File Name: user_data
 
